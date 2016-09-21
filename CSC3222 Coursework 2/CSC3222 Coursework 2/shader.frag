@@ -1,8 +1,10 @@
 #version 330 core
-in vec3 frag_color;
-out vec3 color;
+in vec4 frag_color;
+
+out vec4 color;
 
 void main(){
-  color = vec3(1.f, 1.f, 1.f);
-  //color = frag_color;
+  //color.xyz = vec3(0.1f * frag_path[1], 0.1f*frag_path[2], 0.1f*frag_path[3]);
+  //color.w = 1.0f;
+  color = frag_color;
 }
